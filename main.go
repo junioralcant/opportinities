@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/junioralcant/opportinities.git/config"
-	"github.com/junioralcant/opportinities.git/router"
+	"github.com/junioralcant/opportinities.git/infra/config"
+	"github.com/junioralcant/opportinities.git/main/router"
 )
 
 var (

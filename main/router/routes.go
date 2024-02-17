@@ -2,7 +2,8 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/junioralcant/opportinities.git/controllers"
+	"github.com/junioralcant/opportinities.git/main/factories"
+	"github.com/junioralcant/opportinities.git/presentation/controllers"
 )
 
 func initializeRoutes(r *gin.Engine) {
@@ -18,5 +19,5 @@ func initializeRoutes(r *gin.Engine) {
 
 	v1.PUT("/opening", controllers.UpdateOpeningController)
 
-	v1.GET("/openings", controllers.ListOpeningController)
+	v1.GET("/openings", factories.ListOpeningControllerFactory().Handle)
 }

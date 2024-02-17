@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/junioralcant/opportinities.git/schemas"
+	"github.com/junioralcant/opportinities.git/domain/models"
 )
 
 func CreateOpeningController(ctx *gin.Context) {
@@ -18,7 +18,7 @@ func CreateOpeningController(ctx *gin.Context) {
 		return
 	}
 
-	createOpening := schemas.Opening{
+	createOpening := models.Opening{
 		Role:     request.Role,
 		Company:  request.Company,
 		Location: request.Location,

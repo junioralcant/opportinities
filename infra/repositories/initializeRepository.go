@@ -1,7 +1,7 @@
-package controllers
+package repositories
 
 import (
-	"github.com/junioralcant/opportinities.git/config"
+	"github.com/junioralcant/opportinities.git/infra/config"
 	"gorm.io/gorm"
 )
 
@@ -10,7 +10,7 @@ var (
 	db     *gorm.DB
 )
 
-func InitializeController() {
+func InitializeRepository() {
 	logger = config.GetLogger("controllers")
 	db = config.GetSQLite()
 }
